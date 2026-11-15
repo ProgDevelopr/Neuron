@@ -145,7 +145,7 @@ args = parser.parse_args()
 if not exists(args.file):
     error_message(f"File \"{args.file}\" not found.")
 
-if args.file.split(".")[-1].lower() != "neu":
+if args.file.split(".")[-1].lower() != "n":
     error_message(f"File extension must be \".n\".")
 
 with open(args.file, "r", encoding="utf-8") as f:
