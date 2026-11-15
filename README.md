@@ -44,3 +44,5 @@
 - Any unrecognised punctuation or symbol is ignored as BrainF**k wanted.
 
 - There are 500 cells (all 0) in a default tape if the user doesn't enter --tape CLI argument.
+
+- Neuron files must have the extension, `".n"`.
