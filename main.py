@@ -36,9 +36,17 @@ def find_quotes(code):
         error_message(f"Unmatched quote at index {idx}.")
     return table
 
+arithmetic = {
+    "+": 1,
+    "-": -1,
+    "*": 5,
+    "#": -5
+}
+
 def run(code: str, size_t=500):
     tape = [0] * size_t
-    idx, pc = size_t // 2, 0
+    idx = size_t // 2
+    pc = 0
     bracket_table = find_brackets(code)
     quote_table = find_quotes(code)
 
@@ -56,17 +64,8 @@ def run(code: str, size_t=500):
                 if idx < 0:
                     error_message(f"Current index is below 0.")
 
-            elif c == "+":
-                tape[idx] += 1
-
-            elif c == "*":
-                tape[idx] += 5
-
-            elif c == "-":
-                tape[idx] -= 1
-
-            elif c == "#":
-                tape[idx] -= 5
+            elif c in arithmetic:
+                tape[idx] += arithmetic[c]
 
             elif c == ",":
                 inp = 0
@@ -114,6 +113,9 @@ def run(code: str, size_t=500):
 
             elif c == "!":
                 tape[idx] = 0
+
+            elif c == "|":
+                tape[idx] = abs(tape[idx])
 
             elif c == "\"":
                 pc = quote_table[pc]

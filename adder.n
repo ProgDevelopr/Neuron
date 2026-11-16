@@ -1,12 +1,14 @@
 "
-A PROGRAM THAT ADDS TWO NUMBERS AND REPEATS (NEURON ESOTERIC PROGRAMMING LANGUAGE)
+A PROGRAM THAT ADDS TWO POSITIVE NUMBERS AND REPEATS (NEURON ESOTERIC PROGRAMMING LANGUAGE)
 "
 !<!             "Clear current cell, switch to the cell on the left and clear that aswell."
 Number_1,>      "Enter a number and switch to the cell on the right."
 Number_2,       "Enter a number again."
 Answer_         "Print 'Answer' with a space at the end."
+|<|>            "Find the absolute value of this cell, switch to the cell on the left and go back to the right."
 [-<+>]<.        "Calculate the the sum of the 2 given numbers. (store it on the left cell)"
 >\\;            "Go to the cell on the right, go to a newline twice, and repeat the program forever."
 
 "By the way, strings are comments."
 "you can use the --tape argument to determine the size of the given tape (array)"
+"Try running this command:" "python main.py adder.n --tape 2"
