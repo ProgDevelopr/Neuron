@@ -1,0 +1,8 @@
+"COUNTER PROGRAM"
+Limit,|             "Read an integer."
+[                   "Start the loop."
+    ->+.            "Subtract 1 from the current cell, move to the right cell, add one to it and print."
+    ?<              "Pause and then move to the left cell."
+]                   "If the current cell isn't 0, go back to the start."
+
+"Try running:" "python main.py tally.n --tape 3"
