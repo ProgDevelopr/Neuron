@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 from os.path import exists
 
 def error_message(msg):
-    print(f"[ERROR] {msg}")
+    print(f"\n[ERROR] {msg}")
     e(1)
 
 def find_brackets(code):
