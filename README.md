@@ -14,6 +14,8 @@
 
 `!`  Set the current cell to 0.
 
+`=`  Copy the current cell's value to the one on its right.
+
 `|`  Set the current cell to its absolute value.
 
 `,`  Ask an integer input from the user and keep the value in the current cell.
