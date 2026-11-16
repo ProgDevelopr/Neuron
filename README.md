@@ -1,4 +1,8 @@
+<center>
+<img src="logo.png" alt="Logo" width="110" height="110">
+
 # NEURON ESOTERIC PROGRAMMING LANGUAGE
+</center>
 
 `>`  Move the pointer to the cell on the right.
 
