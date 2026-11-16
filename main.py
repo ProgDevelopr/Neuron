@@ -1,4 +1,4 @@
-"""Intrepeter for the Neuron esoteric programming language"""
+"""Intrepeter for the Neuron esoteric programming language."""
 
 from sys import exit as e
 from argparse import ArgumentParser
@@ -113,6 +113,11 @@ def run(code: str, size_t=500):
 
             elif c == "!":
                 tape[idx] = 0
+
+            elif c == "=":
+                if idx + 1 >= size_t:
+                    error_message(f"Cannot copy to {idx+1} because it's outside the tape (size: {size_t}).")
+                tape[idx+1] = tape[idx]
 
             elif c == "|":
                 tape[idx] = abs(tape[idx])
