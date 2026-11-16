@@ -14,6 +14,8 @@
 
 `!`  Set the current cell to 0.
 
+`|`  Set the current cell to its absolute value.
+
 `,`  Ask an integer input from the user and keep the value in the current cell.
 
 `@`  Ask a character input from the user and store it in the current cell as its ASCII number.
