@@ -1,5 +1,5 @@
 "COUNTER PROGRAM"
-Limit,|             "Read an integer."
+Limit,|             "Read an integer and assign the cell with its absolute value."
 [                   "Start the loop."
     ->+.            "Subtract 1 from the current cell, move to the right cell, add one to it and print."
     ?<              "Pause and then move to the left cell."
