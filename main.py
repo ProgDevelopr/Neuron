@@ -43,7 +43,7 @@ arithmetic = {
     "#": -5
 }
 
-def run(code: str, size_t=500):
+def run(code: str, size_t):
     tape = [0] * size_t
     idx = size_t // 2
     pc = 0
@@ -146,8 +146,11 @@ def run(code: str, size_t=500):
 
 parser = ArgumentParser("Neuron: a BF dialect for the modern world.")
 parser.add_argument("file", type=str)
-parser.add_argument("--tape", type=int, required=False)
+parser.add_argument("--tape", type=int, required=False, default=500)
 args = parser.parse_args()
+
+if args.tape < 1:
+    error_message("Tape size cannot be below 1.")
 
 if not exists(args.file):
     error_message(f"File \"{args.file}\" not found.")
@@ -157,7 +160,4 @@ if args.file.split(".")[-1].lower() != "n":
 
 with open(args.file, "r", encoding="utf-8") as f:
     content = "".join(x.strip().replace(" ","") for x in f.readlines())
-if args.tape:
-    run(content, args.tape)
-else:
-    run(content)
+run(content, args.tape)
